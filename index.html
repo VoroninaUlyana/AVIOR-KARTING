@@ -1,0 +1,2033 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVIOR — Картинг-центр</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<section class="auth-screen" id="authScreen" hidden>
+    <div class="auth-brand">
+        <h1>AVIOR<span>.</span></h1>
+        <p>KARTING EXPERIENCE</p>
+    </div>
+
+    <div class="auth-card" id="loginCard">
+        <span class="auth-label">WELCOME TO AVIOR</span>
+        <h2>Вход в аккаунт</h2>
+        <p class="auth-description">Войдите, чтобы продолжить</p>
+
+        <form id="loginForm">
+            <label for="loginEmail">Электронная почта</label>
+            <input id="loginEmail" type="email"
+                   placeholder="example@mail.com" required>
+
+            <label for="loginPassword">Пароль</label>
+            <input id="loginPassword" type="password"
+                   placeholder="Введите пароль" required>
+
+            <p class="auth-error" id="loginError"></p>
+
+            <button type="submit" class="auth-button">
+                ВОЙТИ В АККАУНТ
+            </button>
+        </form>
+
+        <p class="auth-switch">
+            Нет аккаунта?
+            <button type="button" id="showRegister">Зарегистрироваться</button>
+        </p>
+    </div>
+
+    <div class="auth-card" id="registerCard" hidden>
+        <span class="auth-label">JOIN AVIOR</span>
+        <h2>Регистрация</h2>
+        <p class="auth-description">Создайте аккаунт клиента</p>
+
+        <form id="registerForm">
+            <label for="registerName">ФИО</label>
+            <input id="registerName" type="text"
+                   placeholder="Имя и фамилия" required>
+
+            <label for="registerPhone">Телефон</label>
+            <input id="registerPhone" type="tel"
+                   placeholder="+375 XX XXX-XX-XX" required>
+
+            <label for="registerEmail">Электронная почта</label>
+            <input id="registerEmail" type="email"
+                   placeholder="example@mail.com" required>
+
+            <label for="registerPassword">Пароль</label>
+            <input id="registerPassword" type="password"
+                   minlength="6" placeholder="Минимум 6 символов" required>
+
+            <p class="auth-error" id="registerError"></p>
+
+            <button type="submit" class="auth-button">
+                СОЗДАТЬ АККАУНТ
+            </button>
+        </form>
+
+        <p class="auth-switch">
+            Уже есть аккаунт?
+            <button type="button" id="showLogin">Войти</button>
+        </p>
+    </div>
+
+    <p class="auth-footer">© AVIOR KARTING · ALL RIGHTS RESERVED</p>
+</section>
+
+
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">AVIOR</a>
+
+            <nav class="navigation">
+                <a href="#home">Главная</a>
+                <a href="#tracks">Наши трассы</a>
+                <a href="#booking">Бронирование</a>
+                <a href="#shop">Магазин</a>
+                <a href="#authScreen" id="cabinetButton">
+    Личный кабинет
+</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero" id="home">
+            <div class="container">
+                <h1>ПОЧУВСТВУЙ <span>СКОРОСТЬ</span></h1>
+
+<p>
+    AVIOR — место, где начинается твоя гонка.
+    Выбирай трассу, садись за руль и выходи на старт.
+</p>
+                <a href="#booking" class="button">Забронировать заезд</a>
+            </div>
+        </section>
+
+        <section class="tracks" id="tracks">
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="section-label">AVIOR KARTING</span>
+            <h2>НАШИ ТРАССЫ</h2>
+            <p>Выбери площадку и приготовься к заезду</p>
+        </div>
+
+        <div class="track-list">
+
+            <article class="track-card">
+                <div class="track-image track-image-one">
+                    <span class="track-number">01</span>
+                    <span class="track-type">INDOOR</span>
+                    <span class="track-emoji">🏎️</span>
+                </div>
+
+                <div class="track-info">
+                    <h3>AVIOR ARENA</h3>
+                   <p class="track-address">
+    Адрес: г. Минск, ул. Скрыганова, 5
+</p>
+                    <p class="track-description">
+                        Крытая трасса для любителей скорости.
+                        Подходит для начинающих и опытных гонщиков.
+                    </p>
+
+                    <div class="track-features">
+                        <span>Детские карты</span>
+                        <span>Одиночные карты</span>
+                    </div>
+
+                    <a href="#booking" class="track-button">
+                        Выбрать трассу
+                    </a>
+                </div>
+            </article>
+
+            <article class="track-card">
+                <div class="track-image track-image-two">
+                    <span class="track-number">02</span>
+                    <span class="track-type">OUTDOOR</span>
+                    <span class="track-emoji">🏁</span>
+                </div>
+
+                <div class="track-info">
+                    <h3>AVIOR RACING</h3>
+                    <p class="track-address">
+    Адрес: г. Минск, ул. Владислава Голубка, 5
+</p>
+                    <p class="track-description">
+                        Просторная трасса с интересными поворотами
+                        и возможностью проверить свои навыки.
+                    </p>
+
+                    <div class="track-features">
+                        <span>Одиночные карты</span>
+                        <span>Карты для двоих</span>
+                    </div>
+
+                    <a href="#booking" class="track-button">
+                        Выбрать трассу
+                    </a>
+                </div>
+            </article>
+
+            <article class="track-card">
+                <div class="track-image track-image-three">
+                    <span class="track-number">03</span>
+                    <span class="track-type">TRAINING</span>
+                    <span class="track-emoji">🏆</span>
+                </div>
+
+                <div class="track-info">
+                    <h3>AVIOR SPORT</h3>
+                    <p class="track-address">
+    Адрес: д. Прилесье, Минский район
+</p>
+                    <p class="track-description">
+                        Площадка для тренировок, обучения
+                        и индивидуальных занятий с тренером.
+                    </p>
+
+                    <div class="track-features">
+                        <span>Обучение</span>
+                        <span>Индивидуальные занятия</span>
+                    </div>
+
+                    <a href="#booking" class="track-button">
+                        Выбрать трассу
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+       <section class="booking" id="booking">
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="section-label">AVIOR KARTING</span>
+            <h2>БРОНИРОВАНИЕ ЗАЕЗДА</h2>
+            <p>Запланируй свой заезд и почувствуй скорость</p>
+        </div>
+
+        <form class="booking-form">
+
+            <!-- Выбор площадки -->
+            <div class="form-section">
+                <h3>01. Выбор площадки</h3>
+
+                <label for="track">Картинг-центр</label>
+                <select id="track" name="track">
+                    <option value="">Выберите площадку</option>
+                    <option value="arena">AVIOR ARENA — Скрыганова, 5</option>
+                    <option value="racing">AVIOR RACING — Владислава Голубка, 5</option>
+                    <option value="sport">AVIOR SPORT — Прилесье</option>
+                </select>
+            </div>
+
+            <div class="form-section">
+                <h3>02. Выбор карта</h3>
+
+                <div class="kart-options">
+
+                    <label class="kart-option">
+                        <input type="radio" name="kart" value="child">
+                        <span class="kart-content">
+                            <span class="kart-icon">🏎️</span>
+                            <strong>Детский</strong>
+                            <small>Для юных гонщиков</small>
+                        </span>
+                    </label>
+
+                    <label class="kart-option">
+                        <input type="radio" name="kart" value="single">
+                        <span class="kart-content">
+                            <span class="kart-icon">🏎️</span>
+                            <strong>Одиночный</strong>
+                            <small>Для одного человека</small>
+                        </span>
+                    </label>
+
+                    <label class="kart-option">
+                        <input type="radio" name="kart" value="double">
+                        <span class="kart-content">
+                            <span class="kart-icon">🏁</span>
+                            <strong>Для двоих</strong>
+                            <small>Для совместного заезда</small>
+                        </span>
+                    </label>
+
+                </div>
+            </div>
+
+            
+<div class="form-section">
+    <h3>03. Выбор даты и времени</h3>
+
+    <div class="date-time-layout">
+
+        <!-- Календарь -->
+        <div class="calendar">
+            <div class="calendar-header">
+                <button type="button" class="calendar-arrow" aria-label="Предыдущий месяц">‹</button>
+                <strong>Декабрь 2026</strong>
+                <button type="button" class="calendar-arrow" aria-label="Следующий месяц">›</button>
+            </div>
+
+            <div class="calendar-grid">
+                <span class="weekday">ПН</span>
+                <span class="weekday">ВТ</span>
+                <span class="weekday">СР</span>
+                <span class="weekday">ЧТ</span>
+                <span class="weekday">ПТ</span>
+                <span class="weekday">СБ</span>
+                <span class="weekday">ВС</span>
+
+                <span class="calendar-empty"></span>
+
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-01"><span>1</span></label>
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-02"><span>2</span></label>
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-03"><span>3</span></label>
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-04"><span>4</span></label>
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-05"><span>5</span></label>
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-06"><span>6</span></label>
+
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-07"><span>7</span></label>
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-08"><span>8</span></label>
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-09"><span>9</span></label>
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-10"><span>10</span></label>
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-11"><span>11</span></label>
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-12"><span>12</span></label>
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-13"><span>13</span></label>
+
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-14"><span>14</span></label>
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-15"><span>15</span></label>
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-16"><span>16</span></label>
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-17"><span>17</span></label>
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-18"><span>18</span></label>
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-19"><span>19</span></label>
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-20"><span>20</span></label>
+
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-21"><span>21</span></label>
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-22"><span>22</span></label>
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-23"><span>23</span></label>
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-24"><span>24</span></label>
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-25"><span>25</span></label>
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-26"><span>26</span></label>
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-27"><span>27</span></label>
+
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-28"><span>28</span></label>
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-29"><span>29</span></label>
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-30"><span>30</span></label>
+                <label class="calendar-day"><input type="radio" name="booking-date" value="2026-12-31"><span>31</span></label>
+            </div>
+        </div>
+
+        <div class="time-slots">
+            <div class="time-slots-header">
+                <h4>Доступное время</h4>
+                <span>Выберите время заезда</span>
+            </div>
+
+            <div class="time-period">
+                <h5>УТРО <span>09:00–12:00</span></h5>
+                <div class="time-grid">
+                    <label class="time-slot">
+                        <input type="radio" name="booking-time" value="09:00">
+                        <span><strong>09:00</strong><small>4 места</small></span>
+                    </label>
+                    <label class="time-slot">
+                        <input type="radio" name="booking-time" value="10:00">
+                        <span><strong>10:00</strong><small>3 места</small></span>
+                    </label>
+                    <label class="time-slot">
+                        <input type="radio" name="booking-time" value="11:00">
+                        <span><strong>11:00</strong><small>5 мест</small></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="time-period">
+                <h5>ДЕНЬ <span>12:00–17:00</span></h5>
+                <div class="time-grid">
+                    <label class="time-slot">
+                        <input type="radio" name="booking-time" value="12:00">
+                        <span><strong>12:00</strong><small>2 места</small></span>
+                    </label>
+                    <label class="time-slot">
+                        <input type="radio" name="booking-time" value="13:00">
+                        <span><strong>13:00</strong><small>4 места</small></span>
+                    </label>
+                    <label class="time-slot">
+                        <label class="time-slot unavailable">
+    <input type="radio" name="booking-time" value="14:00" disabled>
+                    </label>
+                    <label class="time-slot">
+                        <input type="radio" name="booking-time" value="15:00">
+                        <span><strong>15:00</strong><small>3 места</small></span>
+                    </label>
+                    <label class="time-slot">
+                        <input type="radio" name="booking-time" value="16:00">
+                        <span><strong>16:00</strong><small>2 места</small></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="time-period">
+                <h5>ВЕЧЕР <span>17:00–22:00</span></h5>
+                <div class="time-grid">
+                    <label class="time-slot">
+                        <input type="radio" name="booking-time" value="17:00">
+                        <span><strong>17:00</strong><small>4 места</small></span>
+                    </label>
+                    <label class="time-slot">
+                        <input type="radio" name="booking-time" value="18:00">
+                        <span><strong>18:00</strong><small>2 места</small></span>
+                    </label>
+                    <label class="time-slot">
+                        <input type="radio" name="booking-time" value="19:00">
+                        <span><strong>19:00</strong><small>5 мест</small></span>
+                    </label>
+                    <label class="time-slot">
+                        <input type="radio" name="booking-time" value="20:00">
+                        <span><strong>20:00</strong><small>3 места</small></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p class="form-note">
+        Время и количество свободных мест указаны для демонстрации.
+        Реальное бронирование будет учитывать выбранную площадку и ограничение
+        не менее чем за 1 час до заезда.
+    </p>
+</div>
+
+
+            
+<div class="form-section training-section">
+    <div class="training-heading">
+        <div>
+            <span class="section-label">AVIOR EXPERIENCE</span>
+            <h3>04. Обучение с тренером</h3>
+            <p>Выбери формат подготовки перед заездом</p>
+        </div>
+        <span class="training-number">04 / 05</span>
+    </div>
+
+    <div class="training-choice-grid">
+
+        <label class="training-choice">
+            <input type="radio" name="training" value="none" checked>
+            <span class="training-choice-content">
+                <span class="training-choice-top">
+                    <span class="training-choice-icon">🏁</span>
+                    <span class="choice-check">✓</span>
+                </span>
+                <strong>Без обучения</strong>
+                <small>Сразу на трассу — для тех, кто уже знаком с картингом</small>
+                <span class="choice-tag">Свободный заезд</span>
+            </span>
+        </label>
+
+        <label class="training-choice">
+            <input type="radio" name="training" value="individual">
+            <span class="training-choice-content">
+                <span class="training-choice-top">
+                    <span class="training-choice-icon">🏆</span>
+                    <span class="choice-check">✓</span>
+                </span>
+                <strong>Индивидуальное</strong>
+                <small>Персональная программа и внимание тренера</small>
+                <span class="choice-tag">Один на один</span>
+            </span>
+        </label>
+
+        <label class="training-choice">
+            <input type="radio" name="training" value="group">
+            <span class="training-choice-content">
+                <span class="training-choice-top">
+                    <span class="training-choice-icon">👥</span>
+                    <span class="choice-check">✓</span>
+                </span>
+                <strong>Групповое</strong>
+                <small>Изучай основы в компании других гонщиков</small>
+                <span class="choice-tag">Командный формат</span>
+            </span>
+        </label>
+
+    </div>
+
+    <div class="trainer-panel">
+        <div class="trainer-panel-heading">
+            <div>
+                <span class="section-label">MEET YOUR COACH</span>
+                <h4>Выбери своего тренера</h4>
+                <p>Каждый тренер поможет подготовиться к уверенному заезду</p>
+            </div>
+            <span class="trainer-panel-icon">✦</span>
+        </div>
+
+        <div class="trainer-grid">
+
+            <label class="trainer-card">
+                <input type="radio" name="trainer" value="trainer1">
+                <span class="trainer-card-content">
+                    <span class="trainer-avatar avatar-one">АИ</span>
+                    <span class="trainer-selected">✓</span>
+                    <strong>Александр Иванов</strong>
+                    <small>Техника вождения</small>
+                    <span class="trainer-experience">Опыт: 8 лет</span>
+                    <span class="trainer-select">Выбрать тренера</span>
+                </span>
+            </label>
+
+            <label class="trainer-card">
+                <input type="radio" name="trainer" value="trainer2">
+                <span class="trainer-card-content">
+                    <span class="trainer-avatar avatar-two">ДП</span>
+                    <span class="trainer-selected">✓</span>
+                    <strong>Дмитрий Петров</strong>
+                    <small>Скорость и траектории</small>
+                    <span class="trainer-experience">Опыт: 6 лет</span>
+                    <span class="trainer-select">Выбрать тренера</span>
+                </span>
+            </label>
+
+            <label class="trainer-card">
+                <input type="radio" name="trainer" value="trainer3">
+                <span class="trainer-card-content">
+                    <span class="trainer-avatar avatar-three">МС</span>
+                    <span class="trainer-selected">✓</span>
+                    <strong>Максим Соколов</strong>
+                    <small>Обучение новичков</small>
+                    <span class="trainer-experience">Опыт: 5 лет</span>
+                    <span class="trainer-select">Выбрать тренера</span>
+                </span>
+            </label>
+
+        </div>
+    </div>
+
+    <div class="group-training-panel">
+        <div class="group-training-icon">🏎️</div>
+        <div class="group-training-info">
+            <span class="section-label">TEAM TRAINING</span>
+            <h4>Тренируйся вместе с другими</h4>
+            <p>
+                Групповое занятие включает знакомство с правилами трассы,
+                основы управления картом и практические рекомендации тренера.
+            </p>
+            <div class="group-training-details">
+                <span>◷ Продолжительность: 30 минут</span>
+                <span>◎ Групповой формат</span>
+            </div>
+        </div>
+    </div>
+
+    <p class="form-note">
+        Информация о тренерах и занятиях демонстрационная.
+        Доступность тренеров будет проверяться при подключении логики бронирования.
+    </p>
+</div>
+
+
+            <div class="form-section">
+                <h3>05. Оплата</h3>
+
+                <div class="training-options">
+
+                    <label class="radio-line">
+                        <input type="radio" name="payment" value="online" checked>
+                        Предварительная оплата заезда
+                    </label>
+
+                    <label class="radio-line">
+                        <input type="radio" name="payment" value="subscription">
+                        Использовать абонемент
+                    </label>
+
+                    <label class="radio-line">
+                        <input type="radio" name="payment" value="onsite">
+                        Оплата на месте
+                    </label>
+
+                </div>
+            </div>
+
+            <div class="booking-summary">
+                <div>
+                    <span>Стоимость заезда</span>
+                    <strong>Рассчитывается системой</strong>
+                </div>
+
+                <div>
+                    <span>VIP-скидка</span>
+                    <strong>При наличии VIP-статуса</strong>
+                </div>
+            </div>
+
+            <button type="button" class="booking-submit">
+                Подтвердить бронирование
+            </button>
+
+            <p class="form-note">
+                Это демонстрационный макет. Подтверждение бронирования
+                и оплата будут реализованы на этапе программирования логики.
+            </p>
+
+        </form>
+
+    </div>
+    <button type="button" id="showErrorButton" hidden>
+    Проверить форму ошибки
+</button>
+</section>
+
+        
+<section class="shop" id="shop">
+    <div class="container">
+
+        <div class="shop-heading">
+            <div>
+                <span class="section-label">AVIOR RACING EQUIPMENT</span>
+                <h2>МАГАЗИН ЭКИПИРОВКИ</h2>
+                <p>Всё необходимое для твоего идеального заезда</p>
+            </div>
+
+            <div class="shop-cart">
+                <span class="cart-icon">🛒</span>
+                <span>МОЯ КОРЗИНА</span>
+                <strong>0</strong>
+            </div>
+        </div>
+
+        <div class="shop-banner">
+            <div class="shop-banner-content">
+                <span class="banner-label">RACE. FEEL. REPEAT.</span>
+                <h3>ТВОЯ ГОНОЧНАЯ<br>ЭКИПИРОВКА</h3>
+                <p>Комфорт, защита и стиль на каждом круге</p>
+                <a href="#shop-products" class="banner-button">СМОТРЕТЬ КОЛЛЕКЦИЮ <span>↗</span></a>
+            </div>
+            <div class="banner-decoration">AVIOR</div>
+            <div class="banner-racing-mark">01 / RACING SERIES</div>
+        </div>
+
+        <div class="shop-categories">
+            <div>
+                <span class="section-label">EXPLORE COLLECTION</span>
+                <h3>Категории</h3>
+            </div>
+
+            <div class="category-list">
+                <a href="#shop-products" class="category-link active">Все товары</a>
+                <a href="#shop-products" class="category-link">Шлемы</a>
+                <a href="#shop-products" class="category-link">Перчатки</a>
+                <a href="#shop-products" class="category-link">Комбинезоны</a>
+                <a href="#shop-products" class="category-link">Аксессуары</a>
+            </div>
+        </div>
+
+        <div class="shop-products-heading" id="shop-products">
+            <div>
+                <span class="section-label">AVIOR COLLECTION</span>
+                <h3>Популярные товары</h3>
+            </div>
+            <span class="products-count">04 ТОВАРА</span>
+        </div>
+
+        <div class="products-grid">
+
+            <article class="product-card">
+                <div class="product-visual helmet-visual">
+                    <span class="product-badge bestseller">ХИТ ПРОДАЖ</span>
+                    <span class="product-art">🏎️</span>
+                    <span class="product-visual-caption">AVIOR / HELMET SERIES</span>
+                    <button type="button" class="favorite-button" aria-label="Добавить в избранное">♡</button>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">ЗАЩИТА ГОЛОВЫ</span>
+                    <h4>AVIOR RACE HELMET</h4>
+                    <p>Гоночный шлем с современным дизайном</p>
+                    <div class="product-bottom">
+                        <div class="product-price">
+                            <strong>320 BYN</strong>
+                            <small>Демонстрационная цена</small>
+                        </div>
+                        <button type="button" class="add-to-cart" aria-label="Добавить шлем в корзину">+</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-visual gloves-visual">
+                    <span class="product-badge new-product">НОВИНКА</span>
+                    <span class="product-art">🧤</span>
+                    <span class="product-visual-caption">AVIOR / GLOVE SERIES</span>
+                    <button type="button" class="favorite-button" aria-label="Добавить в избранное">♡</button>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">АКСЕССУАРЫ</span>
+                    <h4>AVIOR GRIP GLOVES</h4>
+                    <p>Перчатки для уверенного хвата руля</p>
+                    <div class="product-bottom">
+                        <div class="product-price">
+                            <strong>85 BYN</strong>
+                            <small>Демонстрационная цена</small>
+                        </div>
+                        <button type="button" class="add-to-cart" aria-label="Добавить перчатки в корзину">+</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-visual suit-visual">
+                    <span class="product-badge">AVIOR SERIES</span>
+                    <span class="product-art">🏁</span>
+                    <span class="product-visual-caption">AVIOR / SUIT SERIES</span>
+                    <button type="button" class="favorite-button" aria-label="Добавить в избранное">♡</button>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">ОДЕЖДА</span>
+                    <h4>AVIOR RACING SUIT</h4>
+                    <p>Гоночный комбинезон в фирменном стиле</p>
+                    <div class="product-bottom">
+                        <div class="product-price">
+                            <strong>450 BYN</strong>
+                            <small>Демонстрационная цена</small>
+                        </div>
+                        <button type="button" class="add-to-cart" aria-label="Добавить комбинезон в корзину">+</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-visual accessory-visual">
+                    <span class="product-badge new-product">НОВИНКА</span>
+                    <span class="product-art">🛡️</span>
+                    <span class="product-visual-caption">AVIOR / PROTECTION</span>
+                    <button type="button" class="favorite-button" aria-label="Добавить в избранное">♡</button>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">ЗАЩИТА</span>
+                    <h4>AVIOR PROTECT SET</h4>
+                    <p>Комплект защитных аксессуаров</p>
+                    <div class="product-bottom">
+                        <div class="product-price">
+                            <strong>160 BYN</strong>
+                            <small>Демонстрационная цена</small>
+                        </div>
+                        <button type="button" class="add-to-cart" aria-label="Добавить комплект в корзину">+</button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="shop-benefits">
+            <div class="shop-benefit">
+                <span>✦</span>
+                <div>
+                    <strong>AVIOR QUALITY</strong>
+                    <small>Продуманный ассортимент</small>
+                </div>
+            </div>
+
+            <div class="shop-benefit">
+                <span>◈</span>
+                <div>
+                    <strong>VIP PRIVILEGES</strong>
+                    <small>Специальные предложения для участников</small>
+                </div>
+            </div>
+
+            <div class="shop-benefit">
+                <span>↗</span>
+                <div>
+                    <strong>RACE YOUR WAY</strong>
+                    <small>Подготовься к следующему заезду</small>
+                </div>
+            </div>
+        </div>
+
+        <p class="shop-demo-note">
+            Товары, цены и ассортимент представлены для демонстрации интерфейса.
+        </p>
+
+    </div>
+</section>
+
+
+<section class="admin" id="admin" hidden>
+    <div class="section-heading">
+        <div>
+            <span class="section-label">AVIOR CONTROL CENTER</span>
+            <h2>Панель администратора</h2>
+            <p>Управление бронированиями и клиентами</p>
+        </div>
+        <span class="admin-status">
+            <span class="status-dot"></span>
+            Система активна
+        </span>
+    </div>
+
+    <div class="admin-stats">
+        <article class="admin-stat">
+            <span>Бронирования сегодня</span>
+            <strong>28</strong>
+            <small>+12% к прошлой неделе</small>
+        </article>
+
+        <article class="admin-stat">
+            <span>Ожидают подтверждения</span>
+            <strong>06</strong>
+            <small>Требуют внимания</small>
+        </article>
+
+        <article class="admin-stat">
+            <span>Посетители сегодня</span>
+            <strong>94</strong>
+            <small>Все площадки</small>
+        </article>
+
+        <article class="admin-stat">
+            <span>Заказы по телефону</span>
+            <strong>09</strong>
+            <small>За текущий день</small>
+        </article>
+        </div>
+
+    <div class="admin-filters">
+        <div class="filter-field">
+            <label for="orderSearch">Поиск заказа</label>
+            <input
+                type="search"
+                id="orderSearch"
+                placeholder="Введите имя или телефон клиента"
+            >
+        </div>
+
+        <div class="filter-field">
+            <label for="orderStatus">Статус заказа</label>
+            <select id="orderStatus">
+                <option value="all">Все заказы</option>
+                <option value="new">Новые</option>
+                <option value="confirmed">Подтверждённые</option>
+                <option value="cancelled">Отменённые</option>
+            </select>
+        </div>
+
+        <button type="button" id="resetFilters">
+            Сбросить фильтры
+        </button>
+    </div>
+
+    <div class="admin-content">
+        <div class="admin-orders">
+            <div class="admin-block-heading">
+                <div>
+                    <span class="section-label">BOOKING MANAGEMENT</span>
+                    <h3>Последние бронирования</h3>
+                </div>
+                <span class="orders-count">3 заказа</span>
+            </div>
+
+            <article class="order-card">
+                <div class="order-top">
+                    <div>
+                        <strong>Александр Смирнов</strong>
+                        <span>+375 29 123-45-67</span>
+                    </div>
+                    <span class="order-status waiting">Ожидает</span>
+                </div>
+                <div class="order-details">
+                    <span>05 декабря · 14:00</span>
+                    <span>AVIOR ARENA</span>
+                    <span>Одиночный карт</span>
+                </div>
+                <div class="order-bottom">
+                    <span>Предоплата: 30 BYN</span>
+                    <button type="button" class="admin-action">Подтвердить</button>
+                </div>
+            </article>
+
+            <article class="order-card">
+                <div class="order-top">
+                    <div>
+                        <strong>Мария Ковалева</strong>
+                        <span>+375 33 456-78-90</span>
+                    </div>
+                    <span class="order-status confirmed">Подтверждено</span>
+                </div>
+                <div class="order-details">
+                    <span>05 декабря · 15:30</span>
+                    <span>AVIOR RACING</span>
+                    <span>Карт для двоих</span>
+                </div>
+                <div class="order-bottom">
+                    <span>Предоплата: 50 BYN</span>
+                    <button type="button" class="admin-action">Подробнее</button>
+                </div>
+            </article>
+
+            <article class="order-card">
+                <div class="order-top">
+                    <div>
+                        <strong>Дмитрий Волков</strong>
+                        <span>+375 25 987-65-43</span>
+                    </div>
+                    <span class="order-status confirmed">Подтверждено</span>
+                </div>
+                <div class="order-details">
+                    <span>05 декабря · 17:00</span>
+                    <span>AVIOR SPORT</span>
+                    <span>Детский карт</span>
+                </div>
+                <div class="order-bottom">
+                    <span>Предоплата: 25 BYN</span>
+                    <button type="button" class="admin-action">Подробнее</button>
+                </div>
+            </article>
+        </div>
+
+        <aside class="admin-phone">
+            <span class="section-label">PHONE ORDERS</span>
+            <h3>Новый заказ</h3>
+            <p>Оформление бронирования по телефону администратором.</p>
+
+            <details class="phone-form">
+                <summary>+ Принять заказ по телефону</summary>
+
+                <form>
+                    <label for="phone-name">ФИО клиента</label>
+                    <input id="phone-name" type="text" placeholder="Имя и фамилия">
+
+                    <label for="phone-number">Номер телефона</label>
+                    <input id="phone-number" type="tel" placeholder="+375 XX XXX-XX-XX">
+
+                    <label for="phone-arena">Площадка</label>
+                    <select id="phone-arena">
+                        <option>AVIOR ARENA</option>
+                        <option>AVIOR RACING</option>
+                        <option>AVIOR SPORT</option>
+                    </select>
+
+                    <label for="phone-date">Дата заезда</label>
+                    <input id="phone-date" type="date">
+
+                    <label for="phone-time">Время</label>
+                    <input id="phone-time" type="time">
+
+                    <label for="phone-kart">Тип карта</label>
+                    <select id="phone-kart">
+                        <option>Одиночный</option>
+                        <option>Детский</option>
+                        <option>Для двоих</option>
+                    </select>
+
+                    <label for="phone-payment">Оплата</label>
+                    <select id="phone-payment">
+                        <option>Предоплата</option>
+                        <option>Оплата на месте</option>
+                        <option>Абонемент</option>
+                    </select>
+
+                    <button type="button" class="admin-submit">
+                        Создать заказ
+                    </button>
+                </form>
+            </details>
+        </aside>
+    </div>
+</section>
+
+
+<section class="management" id="management" hidden>
+    <div class="section-heading">
+        <div>
+            <span class="section-label">AVIOR BUSINESS ANALYTICS</span>
+            <h2>Панель руководителя</h2>
+            <p>Аналитика и эффективность картинговых площадок</p>
+        </div>
+
+        <span class="management-period">ОТЧЁТ · ДЕКАБРЬ 2026</span>
+    </div>
+
+    <div class="management-overview">
+        <article class="management-card">
+            <span>Всего часов работы</span>
+            <strong>486 <small>ч</small></strong>
+            <p>Все площадки за период</p>
+        </article>
+
+        <article class="management-card">
+            <span>Среднее время работы</span>
+            <strong>8.1 <small>ч</small></strong>
+            <p>В среднем за день</p>
+        </article>
+
+        <article class="management-card">
+            <span>Количество посетителей</span>
+            <strong>2 840</strong>
+            <p>За выбранный период</p>
+        </article>
+
+        <article class="management-card">
+            <span>Средняя загрузка</span>
+            <strong>78<small>%</small></strong>
+            <p>По всем площадкам</p>
+        </article>
+    </div>
+
+    <div class="management-grid">
+        <div class="management-chart">
+            <div class="management-block-title">
+                <div>
+                    <span class="section-label">TRACK OCCUPANCY</span>
+                    <h3>Загрузка площадок</h3>
+                </div>
+                <span class="chart-period">За неделю</span>
+            </div>
+
+            <div class="chart-legend">
+                <span><i class="legend-orange"></i> AVIOR ARENA</span>
+                <span><i class="legend-yellow"></i> AVIOR RACING</span>
+                <span><i class="legend-gray"></i> AVIOR SPORT</span>
+            </div>
+
+            <div class="occupancy-chart">
+                <div class="chart-y-labels">
+                    <span>100%</span>
+                    <span>75%</span>
+                    <span>50%</span>
+                    <span>25%</span>
+                    <span>0%</span>
+                </div>
+
+                <div class="chart-area">
+                    <div class="chart-grid-lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="chart-columns">
+                        <div class="chart-day">
+                            <div class="chart-bars">
+                                <i style="height: 85%"></i>
+                                <i style="height: 65%" class="yellow-bar"></i>
+                                <i style="height: 45%" class="gray-bar"></i>
+                            </div>
+                            <span>ПН</span>
+                        </div>
+
+                        <div class="chart-day">
+                            <div class="chart-bars">
+                                <i style="height: 70%"></i>
+                                <i style="height: 80%" class="yellow-bar"></i>
+                                <i style="height: 55%" class="gray-bar"></i>
+                            </div>
+                            <span>ВТ</span>
+                        </div>
+
+                        <div class="chart-day">
+                            <div class="chart-bars">
+                                <i style="height: 90%"></i>
+                                <i style="height: 75%" class="yellow-bar"></i>
+                                <i style="height: 60%" class="gray-bar"></i>
+                            </div>
+                            <span>СР</span>
+                        </div>
+
+                        <div class="chart-day">
+                            <div class="chart-bars">
+                                <i style="height: 65%"></i>
+                                <i style="height: 55%" class="yellow-bar"></i>
+                                <i style="height: 40%" class="gray-bar"></i>
+                            </div>
+                            <span>ЧТ</span>
+                        </div>
+
+                        <div class="chart-day">
+                            <div class="chart-bars">
+                                <i style="height: 95%"></i>
+                                <i style="height: 85%" class="yellow-bar"></i>
+                                <i style="height: 70%" class="gray-bar"></i>
+                            </div>
+                            <span>ПТ</span>
+                        </div>
+
+                        <div class="chart-day">
+                            <div class="chart-bars">
+                                <i style="height: 100%"></i>
+                                <i style="height: 90%" class="yellow-bar"></i>
+                                <i style="height: 80%" class="gray-bar"></i>
+                            </div>
+                            <span>СБ</span>
+                        </div>
+
+                        <div class="chart-day">
+                            <div class="chart-bars">
+                                <i style="height: 90%"></i>
+                                <i style="height: 75%" class="yellow-bar"></i>
+                                <i style="height: 65%" class="gray-bar"></i>
+                            </div>
+                            <span>ВС</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <aside class="management-ranking">
+            <span class="section-label">LOCATION ANALYTICS</span>
+            <h3>Показатели площадок</h3>
+
+            <div class="location-metric">
+                <div class="location-metric-heading">
+                    <strong>AVIOR ARENA</strong>
+                    <span>86%</span>
+                </div>
+                <div class="metric-track">
+                    <i style="width: 86%"></i>
+                </div>
+                <small>168 часов работы</small>
+            </div>
+
+            <div class="location-metric">
+                <div class="location-metric-heading">
+                    <strong>AVIOR RACING</strong>
+                    <span>78%</span>
+                </div>
+                <div class="metric-track">
+                    <i style="width: 78%"></i>
+                </div>
+                <small>154 часа работы</small>
+            </div>
+
+            <div class="location-metric">
+                <div class="location-metric-heading">
+                    <strong>AVIOR SPORT</strong>
+                    <span>70%</span>
+                </div>
+                <div class="metric-track">
+                    <i style="width: 70%"></i>
+                </div>
+                <small>164 часа работы</small>
+            </div>
+        </aside>
+    </div>
+
+    <div class="management-note">
+        <div class="note-icon">✦</div>
+        <div>
+            <strong>Аналитический отчёт</strong>
+            <p>Руководитель может оценивать загруженность площадок,
+            сравнивать часы работы и анализировать посещаемость.</p>
+        </div>
+    </div>
+</section>
+
+        
+<section class="profile" id="profile" hidden>
+    <div class="container">
+
+        <!-- Заголовок кабинета -->
+        <div class="profile-heading">
+            <div>
+                <span class="section-label">AVIOR MEMBERS CLUB</span>
+                <h2>ЛИЧНЫЙ КАБИНЕТ</h2>
+                <p>Твоя история скорости начинается здесь</p>
+            </div>
+            <div class="profile-status">
+                <span class="status-dot"></span>
+                DEMO ACCOUNT
+            </div>
+        </div>
+
+        <!-- Приветствие -->
+        <div class="profile-welcome">
+            <div class="welcome-avatar">A</div>
+            <div class="welcome-text">
+                <span>РАДЫ ВИДЕТЬ ТЕБЯ СНОВА</span>
+                <h3>Гонщик AVIOR</h3>
+                <p>Управляй бронированиями, следи за достижениями и открывай новые возможности.</p>
+            </div>
+            <a href="#booking" class="welcome-button">Забронировать заезд <span>↗</span></a>
+        </div>
+
+        <div class="vip-card">
+            <div class="vip-card-glow"></div>
+
+            <div class="vip-card-top">
+                <div class="vip-brand">
+                    <span class="vip-brand-symbol">A</span>
+                    <span>AVIOR <small>RACING CLUB</small></span>
+                </div>
+                <span class="vip-label">MEMBER CARD</span>
+            </div>
+
+            <div class="vip-card-middle">
+                <span class="vip-tier">VIP STATUS</span>
+                <h3>GOLD MEMBER</h3>
+                <p>Особый статус для тех, кто выбирает скорость</p>
+            </div>
+
+            <div class="vip-card-bottom">
+                <div>
+                    <small>ПРИВИЛЕГИЯ УЧАСТНИКА</small>
+                    <strong>−15% <span>на заезды</span></strong>
+                </div>
+                <div class="vip-card-chip">✦</div>
+            </div>
+        </div>
+
+        <!-- Статистика -->
+        <div class="profile-stats">
+            <article class="stat-card">
+                <span class="stat-icon">🏁</span>
+                <span class="stat-value">12</span>
+                <span class="stat-title">Всего заездов</span>
+                <span class="stat-caption">За всё время</span>
+            </article>
+
+            <article class="stat-card">
+                <span class="stat-icon">◷</span>
+                <span class="stat-value">4.5 <small>ч</small></span>
+                <span class="stat-title">Время на трассе</span>
+                <span class="stat-caption">Твой гоночный опыт</span>
+            </article>
+
+            <article class="stat-card">
+                <span class="stat-icon">✦</span>
+                <span class="stat-value">850</span>
+                <span class="stat-title">Бонусные баллы</span>
+                <span class="stat-caption">Доступно к использованию</span>
+            </article>
+
+            <article class="stat-card">
+                <span class="stat-icon">♛</span>
+                <span class="stat-value">GOLD</span>
+                <span class="stat-title">Уровень участника</span>
+                <span class="stat-caption">VIP-программа</span>
+            </article>
+        </div>
+
+        <div class="profile-content-grid">
+
+            <div class="profile-panel upcoming-panel">
+                <div class="panel-heading">
+                    <div>
+                        <span class="section-label">YOUR NEXT RACE</span>
+                        <h3>Ближайший заезд</h3>
+                    </div>
+                    <span class="booking-status">ОЖИДАЕТСЯ</span>
+                </div>
+
+                <div class="upcoming-race">
+                    <div class="race-date">
+                        <span>ДЕК</span>
+                        <strong>05</strong>
+                        <small>СУББОТА</small>
+                    </div>
+
+                    <div class="race-info">
+                        <h4>AVIOR ARENA</h4>
+                        <p>Одиночный карт</p>
+                        <div class="race-details">
+                            <span>◷ 18:30</span>
+                            <span>⌖ Скрыганова, 5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="upcoming-footer">
+                    <span>Номер бронирования</span>
+                    <strong>AV-2026-001</strong>
+                </div>
+
+                <a href="#booking" class="panel-link">Изменить бронирование <span>↗</span></a>
+            </div>
+
+            <!-- Прогресс VIP -->
+            <div class="profile-panel vip-progress-panel">
+                <span class="section-label">YOUR PROGRESS</span>
+                <h3>Твой путь к PLATINUM</h3>
+                <p>Продолжай участвовать в заездах и открывай новые привилегии.</p>
+
+                <div class="level-progress-heading">
+                    <span>GOLD</span>
+                    <span>PLATINUM</span>
+                </div>
+
+                <div class="level-progress">
+                    <span></span>
+                </div>
+
+                <div class="progress-numbers">
+                    <strong>12 заездов</strong>
+                    <span>До следующего уровня: 8</span>
+                </div>
+
+                <div class="next-level-benefit">
+                    <span>✦</span>
+                    <div>
+                        <strong>Новые привилегии впереди</strong>
+                        <small>Повышенная скидка и специальные предложения</small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="profile-panel history-panel">
+            <div class="panel-heading">
+                <div>
+                    <span class="section-label">RACE HISTORY</span>
+                    <h3>История заездов</h3>
+                </div>
+                <span class="history-count">ПОСЛЕДНИЕ ЗАЕЗДЫ</span>
+            </div>
+
+            <div class="history-list">
+
+                <div class="history-item">
+                    <div class="history-icon">🏎️</div>
+                    <div class="history-info">
+                        <strong>AVIOR ARENA</strong>
+                        <small>Одиночный карт · 15 минут</small>
+                    </div>
+                    <div class="history-date">
+                        <strong>28.11.2026</strong>
+                        <small>18:00</small>
+                    </div>
+                    <span class="history-result">ЗАВЕРШЁН</span>
+                </div>
+
+                <div class="history-item">
+                    <div class="history-icon">🏁</div>
+                    <div class="history-info">
+                        <strong>AVIOR RACING</strong>
+                        <small>Одиночный карт · 15 минут</small>
+                    </div>
+                    <div class="history-date">
+                        <strong>21.11.2026</strong>
+                        <small>16:30</small>
+                    </div>
+                    <span class="history-result">ЗАВЕРШЁН</span>
+                </div>
+
+                <div class="history-item">
+                    <div class="history-icon">🏎️</div>
+                    <div class="history-info">
+                        <strong>AVIOR SPORT</strong>
+                        <small>Детский карт · 10 минут</small>
+                    </div>
+                    <div class="history-date">
+                        <strong>14.11.2026</strong>
+                        <small>12:00</small>
+                    </div>
+                    <span class="history-result">ЗАВЕРШЁН</span>
+                </div>
+
+            </div>
+        </div>
+
+<div class="profile-panel my-bookings" id="myBookings">
+
+    <div class="panel-heading">
+        <div>
+            <span class="section-label">BOOKING MANAGEMENT</span>
+            <h3>Мои бронирования</h3>
+            <p>Поиск и управление запланированными заездами</p>
+        </div>
+        <span class="history-count">2 ЗАКАЗА</span>
+    </div>
+
+    <div class="booking-filters">
+
+        <div class="filter-field">
+            <label for="bookingSearch">Поиск</label>
+            <input
+                type="search"
+                id="bookingSearch"
+                placeholder="Номер заказа или площадка"
+            >
+        </div>
+
+        <div class="filter-field">
+            <label for="bookingStatus">Статус</label>
+            <select id="bookingStatus">
+                <option value="all">Все</option>
+                <option value="active">Активные</option>
+                <option value="completed">Завершённые</option>
+                <option value="cancelled">Отменённые</option>
+            </select>
+        </div>
+
+        <button type="button" class="filter-button">
+            Найти
+        </button>
+
+    </div>
+
+    <article class="managed-booking">
+
+        <div class="managed-booking-info">
+            <div>
+                <span class="booking-number">AV-2026-001</span>
+                <span class="managed-status active">АКТИВНО</span>
+            </div>
+
+            <h4>AVIOR ARENA</h4>
+
+            <p>05 декабря 2026 · 18:30</p>
+            <p>Одиночный карт · 15 минут</p>
+            <strong>85 BYN</strong>
+        </div>
+
+        <div class="managed-booking-actions">
+            <button type="button" class="edit-booking">
+                Изменить
+            </button>
+
+            <button type="button" class="cancel-booking">
+                Отменить
+            </button>
+        </div>
+
+    </article>
+
+    <article class="managed-booking">
+
+        <div class="managed-booking-info">
+            <div>
+                <span class="booking-number">AV-2026-002</span>
+                <span class="managed-status completed">ЗАВЕРШЕНО</span>
+            </div>
+
+            <h4>AVIOR RACING</h4>
+
+            <p>21 ноября 2026 · 16:30</p>
+            <p>Одиночный карт · 15 минут</p>
+            <strong>85 BYN</strong>
+        </div>
+
+        <div class="managed-booking-actions">
+            <button type="button" class="view-booking">
+                Подробнее
+            </button>
+        </div>
+
+    </article>
+
+    <p class="interface-hint">
+        «Изменить» открывает форму редактирования.
+        «Отменить» открывает окно подтверждения отмены.
+    </p>
+
+<div class="booking-edit-form" id="bookingEditForm" hidden>
+
+    <div class="panel-heading">
+        <div>
+            <span class="section-label">EDIT BOOKING</span>
+            <h3>Изменение бронирования</h3>
+        </div>
+    </div>
+
+    <form id="editBookingForm">
+
+        <div class="filter-field">
+            <label for="editTrack">Площадка</label>
+            <select id="editTrack">
+                <option>AVIOR ARENA</option>
+                <option>AVIOR RACING</option>
+                <option>AVIOR SPORT</option>
+            </select>
+        </div>
+
+        <div class="filter-field">
+            <label for="editKart">Вид карта</label>
+            <select id="editKart">
+                <option>Одиночный карт</option>
+                <option>Детский карт</option>
+                <option>Карт для двоих</option>
+            </select>
+        </div>
+
+        <div class="filter-field">
+            <label for="editDate">Дата заезда</label>
+            <input type="date" id="editDate" value="2026-12-05">
+        </div>
+
+        <div class="filter-field">
+            <label for="editTime">Время заезда</label>
+            <select id="editTime">
+                <option>18:30</option>
+                <option>19:00</option>
+                <option>19:30</option>
+                <option>20:00</option>
+            </select>
+        </div>
+
+        <div class="managed-booking-actions">
+            <button type="submit" class="edit-booking">
+                Сохранить изменения
+            </button>
+
+            <button type="button" id="closeEditForm" class="cancel-booking">
+                Закрыть
+            </button>
+        </div>
+
+    </form>
+</div>
+
+<div class="cancel-confirmation" id="cancelConfirmation" hidden>
+
+    <span class="section-label">CANCEL BOOKING</span>
+
+    <h3>Отменить бронирование?</h3>
+
+    <p>
+        Вы действительно хотите отменить бронирование
+        AV-2026-001?
+    </p>
+
+    <div class="managed-booking-actions">
+
+        <button type="button" id="confirmCancel" class="cancel-booking">
+            Да, отменить
+        </button>
+
+        <button type="button" id="closeCancel" class="edit-booking">
+            Нет, вернуться
+        </button>
+
+    </div>
+
+</div>
+
+</div>
+
+        <div class="profile-actions">
+            <a href="#booking" class="profile-action-card">
+                <span class="action-icon">🏁</span>
+                <span>
+                    <strong>Новый заезд</strong>
+                    <small>Выбрать дату и время</small>
+                </span>
+                <b>↗</b>
+            </a>
+
+            <a href="#shop" class="profile-action-card">
+                <span class="action-icon">🛍️</span>
+                <span>
+                    <strong>Магазин экипировки</strong>
+                    <small>Всё для твоей гонки</small>
+                </span>
+                <b>↗</b>
+            </a>
+        </div>
+
+        <p class="profile-demo-note">
+            Демонстрационный личный кабинет. Статистика, VIP-статус,
+            бронирования и бонусы приведены в качестве примера.
+        </p>
+
+    </div>
+
+<section class="booking-modal-section" id="editBookingForm">
+
+    <div class="booking-modal">
+        <span class="section-label">BOOKING EDIT</span>
+        <h2>Изменение бронирования</h2>
+        <p>Измените параметры запланированного заезда.</p>
+
+        <form>
+            <div class="edit-form-grid">
+
+                <div class="filter-field">
+                    <label for="editTrack">Площадка</label>
+                    <select id="editTrack">
+                        <option>AVIOR ARENA</option>
+                        <option>AVIOR RACING</option>
+                        <option>AVIOR SPORT</option>
+                    </select>
+                </div>
+
+                <div class="filter-field">
+                    <label for="editKart">Тип карта</label>
+                    <select id="editKart">
+                        <option>Одиночный карт</option>
+                        <option>Детский карт</option>
+                        <option>Карт для двоих</option>
+                    </select>
+                </div>
+
+                <div class="filter-field">
+                    <label for="editDate">Дата</label>
+                    <input type="date" id="editDate">
+                </div>
+
+                <div class="filter-field">
+                    <label for="editTime">Время</label>
+                    <select id="editTime">
+                        <option>15:00</option>
+                        <option>16:00</option>
+                        <option>17:00</option>
+                        <option>18:30</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="modal-actions">
+                <button type="button" class="edit-booking">
+                    Сохранить изменения
+                </button>
+
+                <button type="button" class="view-booking">
+                    Закрыть
+                </button>
+            </div>
+        </form>
+    </div>
+
+</section>
+
+<section class="booking-modal-section" id="cancelBookingForm">
+
+    <div class="booking-modal">
+        <span class="section-label">CANCEL BOOKING</span>
+
+        <h2>Отменить бронирование?</h2>
+
+        <p>
+            Вы действительно хотите отменить заказ AV-2026-001?
+            После подтверждения бронирование будет отменено.
+        </p>
+
+        <div class="modal-actions">
+            <button type="button" class="cancel-booking">
+                Подтвердить отмену
+            </button>
+
+            <button type="button" class="view-booking">
+                Вернуться
+            </button>
+        </div>
+    </div>
+
+</section>
+
+</section>
+
+<section class="error-section" id="errorPage" hidden>
+    <div class="error-card">
+        <span class="error-icon">!</span>
+
+        <h2>Не удалось оформить бронирование</h2>
+
+        <p>
+            На выбранное время нет свободных картов.
+            Пожалуйста, выберите другое время или площадку.
+        </p>
+
+        <a href="#booking" class="error-button">
+            Выбрать другое время
+        </a>
+
+        <a href="#home" class="error-link">
+            Вернуться на главную
+        </a>
+    </div>
+</section>
+
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 AVIOR KARTING</p>
+<p>Твоя скорость. Твои правила. Твоя трасса.</p>
+        </div>
+    </footer>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const authScreen = document.getElementById("authScreen");
+    const loginCard = document.getElementById("loginCard");
+    const registerCard = document.getElementById("registerCard");
+
+    const loginForm = document.getElementById("loginForm");
+    const registerForm = document.getElementById("registerForm");
+
+    const loginError = document.getElementById("loginError");
+    const registerError = document.getElementById("registerError");
+
+    const loginEmail = document.getElementById("loginEmail");
+    const loginPassword = document.getElementById("loginPassword");
+
+    let currentUser = null;
+
+    const registeredUsers = JSON.parse(
+        localStorage.getItem("aviorUsers") || "[]"
+    );
+
+    const demoUsers = [
+        {
+            name: "Клиент AVIOR",
+            email: "client@avior.by",
+            password: "Client123",
+            role: "client"
+        },
+        {
+            name: "Администратор AVIOR",
+            email: "admin@avior.by",
+            password: "Admin123",
+            role: "admin"
+        },
+        {
+            name: "Руководитель AVIOR",
+            email: "director@avior.by",
+            password: "Director123",
+            role: "director"
+        }
+    ];
+
+    if (!authScreen || !loginForm || !registerForm) {
+        console.error("Не найдены элементы авторизации.");
+        return;
+    }
+
+    function openLogin(message = "") {
+        authScreen.hidden = false;
+        loginCard.hidden = false;
+        registerCard.hidden = true;
+        loginError.textContent = message;
+    }
+
+    function requireLogin() {
+        if (!currentUser) {
+            openLogin("Для этого действия необходимо войти в аккаунт.");
+            return false;
+        }
+
+        return true;
+    }
+
+    function showRole(role, name) {
+
+        authScreen.hidden = true;
+
+        document.querySelectorAll("main > section").forEach(function (section) {
+
+            if (role === "client") {
+                section.hidden =
+        section.id === "admin" ||
+        section.id === "management" ||
+        section.id === "errorPage";
+            } else {
+                section.hidden =
+                    section.id !== (role === "admin" ? "admin" : "management");
+            }
+
+        });
+
+        const header = document.querySelector("header");
+        const footer = document.querySelector("footer");
+
+        if (header) header.hidden = role !== "client";
+        if (footer) footer.hidden = role !== "client";
+
+        let logoutButton = document.getElementById("logoutButton");
+
+        if (!logoutButton) {
+            logoutButton = document.createElement("button");
+            logoutButton.id = "logoutButton";
+            logoutButton.textContent = "Выйти";
+            logoutButton.className = "auth-logout";
+
+            document.body.appendChild(logoutButton);
+
+            logoutButton.addEventListener("click", function () {
+                currentUser = null;
+                location.reload();
+            });
+        }
+
+        logoutButton.hidden = false;
+
+        document.title = "AVIOR KARTING — " + name;
+
+        window.scrollTo(0, 0);
+    }
+
+    document.getElementById("cabinetButton")
+        .addEventListener("click", function (event) {
+
+            event.preventDefault();
+
+            if (currentUser && currentUser.role === "client") {
+                const profile = document.getElementById("profile");
+
+                profile.hidden = false;
+                profile.scrollIntoView({ behavior: "smooth" });
+
+                return;
+            }
+
+            openLogin();
+        });
+
+    document.getElementById("showRegister").onclick = function () {
+        loginCard.hidden = true;
+        registerCard.hidden = false;
+        registerError.textContent = "";
+    };
+
+    document.getElementById("showLogin").onclick = function () {
+        registerCard.hidden = true;
+        loginCard.hidden = false;
+        loginError.textContent = "";
+    };
+
+    loginForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        const email = loginEmail.value.trim().toLowerCase();
+        const password = loginPassword.value;
+
+        const user = [...demoUsers, ...registeredUsers].find(function (item) {
+            return item.email.toLowerCase() === email &&
+                   item.password === password;
+        });
+
+        if (!user) {
+            loginError.textContent =
+                "Неверная электронная почта или пароль.";
+            return;
+        }
+
+        currentUser = user;
+
+        loginError.textContent = "";
+
+        showRole(user.role, user.name);
+    });
+
+    registerForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        const name = document.getElementById("registerName").value.trim();
+        const phone = document.getElementById("registerPhone").value.trim();
+
+        const email = document.getElementById("registerEmail")
+            .value.trim().toLowerCase();
+
+        const password = document.getElementById("registerPassword").value;
+
+        const emailExists = [...demoUsers, ...registeredUsers].some(
+            function (user) {
+                return user.email.toLowerCase() === email;
+            }
+        );
+
+        if (emailExists) {
+            registerError.textContent =
+                "Аккаунт с такой почтой уже существует.";
+            return;
+        }
+
+        registeredUsers.push({
+            name: name,
+            phone: phone,
+            email: email,
+            password: password,
+            role: "client"
+        });
+
+        localStorage.setItem(
+            "aviorUsers",
+            JSON.stringify(registeredUsers)
+        );
+
+        registerForm.reset();
+
+        registerCard.hidden = true;
+        loginCard.hidden = false;
+
+        loginEmail.value = email;
+
+        loginError.textContent =
+            "Аккаунт создан! Теперь войдите в систему.";
+    });
+
+    document.querySelectorAll(".add-to-cart")
+        .forEach(function (button) {
+
+            button.addEventListener("click", function () {
+
+                if (!requireLogin()) return;
+
+                alert("Вы вошли в аккаунт. Покупка пока демонстрационная.");
+            });
+
+        });
+
+       const showErrorButton = document.getElementById("showErrorButton");
+const errorPage = document.getElementById("errorPage");
+
+const bookingSubmit = document.querySelector(".booking-submit");
+
+if (bookingSubmit && errorPage) {
+    bookingSubmit.addEventListener("click", function () {
+
+        if (!requireLogin()) return;
+
+        document.querySelectorAll("main > section").forEach(function (section) {
+            section.hidden = section.id !== "errorPage";
+        });
+
+        errorPage.hidden = false;
+        window.scrollTo(0, 0);
+    });
+}
+
+if (showErrorButton && errorPage) {
+    showErrorButton.addEventListener("click", function () {
+        document.querySelectorAll("main > section").forEach(function (section) {
+            section.hidden = section.id !== "errorPage";
+        });
+
+        errorPage.hidden = false;
+        window.scrollTo(0, 0);
+    });
+}
+});
+
+document.querySelectorAll("#errorPage a").forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+        errorPage.hidden = true;
+
+        document.querySelectorAll("main > section").forEach(function (section) {
+            section.hidden =
+                section.id === "admin" ||
+                section.id === "management" ||
+                section.id === "errorPage";
+        });
+
+        window.scrollTo(0, 0);
+    });
+
+});
+
+const bookingEditForm = document.getElementById("bookingEditForm");
+const cancelConfirmation = document.getElementById("cancelConfirmation");
+
+const editBookingButton = document.querySelector(
+    ".managed-booking .edit-booking"
+);
+
+const cancelBookingButton = document.querySelector(
+    ".managed-booking .cancel-booking"
+);
+
+const closeEditForm = document.getElementById("closeEditForm");
+const closeCancel = document.getElementById("closeCancel");
+
+if (editBookingButton && bookingEditForm && cancelConfirmation) {
+    editBookingButton.addEventListener("click", function () {
+        cancelConfirmation.hidden = true;
+        bookingEditForm.hidden = false;
+    });
+}
+
+if (cancelBookingButton && bookingEditForm && cancelConfirmation) {
+    cancelBookingButton.addEventListener("click", function () {
+        bookingEditForm.hidden = true;
+        cancelConfirmation.hidden = false;
+    });
+}
+
+if (closeEditForm && bookingEditForm) {
+    closeEditForm.addEventListener("click", function () {
+        bookingEditForm.hidden = true;
+    });
+}
+
+if (closeCancel && cancelConfirmation) {
+    closeCancel.addEventListener("click", function () {
+        cancelConfirmation.hidden = true;
+    });
+}
+
+const editForm = document.getElementById("editBookingForm");
+
+if (editForm) {
+    editForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        alert("Изменения сохранены (демо)");
+        bookingEditForm.hidden = true;
+    });
+}
+
+const confirmCancel = document.getElementById("confirmCancel");
+
+if (confirmCancel && cancelConfirmation) {
+    confirmCancel.addEventListener("click", function () {
+        const activeBooking = document.querySelector(
+            ".managed-booking"
+        );
+
+        if (activeBooking) {
+            const status = activeBooking.querySelector(
+                ".booking-status"
+            );
+
+            if (status) {
+                status.textContent = "Отменено";
+                status.classList.remove("active");
+                status.classList.add("cancelled");
+            }
+
+            const actions = activeBooking.querySelector(
+                ".managed-booking-actions"
+            );
+
+            if (actions) {
+                actions.hidden = true;
+            }
+        }
+
+        cancelConfirmation.hidden = true;
+        alert("Бронирование отменено (демо)");
+    });
+}
+
+</script>
+
+</body>
+</html>
